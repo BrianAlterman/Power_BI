@@ -1,0 +1,8 @@
+-- Create a column containing the login roll up, Enumber email string is the login to 365
+path = PATH(Sheet1[Business Email],Sheet1[Manager Email])
+
+-- Security assigned to the dashboard needs to be configured with the following DAX:
+PATHCONTAINS('Sheet1'[PATH],USERPRINCIPALNAME())
+
+-- Detailed instructions:
+https://youtu.be/Z0eeTTL7EhQ?si=0flrg6W8TI0lGKOw
