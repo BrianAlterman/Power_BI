@@ -1,0 +1,8 @@
+Offer Accepted CNT = 
+  ROW(
+    "Offer Accepted Status Count",
+    CALCULATE(
+      COUNTROWS('HRA_TA_CANDIDATE_HISTORY'),
+      'HRA_TA_CANDIDATE_HISTORY'[SUBMISSION_STATUS] = "Offer Accepted"
+    )
+  )
