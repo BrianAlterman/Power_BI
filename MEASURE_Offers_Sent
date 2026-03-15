@@ -1,0 +1,8 @@
+Offers Sent CNT = 
+  ROW(
+    "Offer Sent Status Count",
+    CALCULATE(
+      COUNTROWS('HRA_TA_CANDIDATE_HISTORY'),
+      'HRA_TA_CANDIDATE_HISTORY'[SUBMISSION_STATUS] = "Offer Sent"
+    )
+  )
