@@ -1,0 +1,10 @@
+-- This counts candidates in the status "New" from the Snowflake table HRA_TA_CANDIDATE_HISTORY
+
+New CNT = 
+  ROW(
+    "New Submission Status Count",
+    CALCULATE(
+      COUNTROWS('HRA_TA_CANDIDATE_HISTORY'),
+      'HRA_TA_CANDIDATE_HISTORY'[SUBMISSION_STATUS] = "New"
+    )
+  )
