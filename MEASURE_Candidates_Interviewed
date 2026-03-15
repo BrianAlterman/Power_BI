@@ -1,0 +1,8 @@
+Interview CNT = 
+  ROW(
+    "Interview - Scheduled Status Count",
+    CALCULATE(
+      COUNTROWS('HRA_TA_CANDIDATE_HISTORY'),
+      'HRA_TA_CANDIDATE_HISTORY'[SUBMISSION_STATUS] = "Interview - Scheduled"
+    )
+  )
