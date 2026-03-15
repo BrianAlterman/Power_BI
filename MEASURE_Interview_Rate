@@ -1,0 +1,13 @@
+
+Candidate to Interview Rate = [Interview CNT]/[New CNT]
+
+-- Measure with format forces through formula:
+Candidate to Interview Rate = FORMAT([Interview CNT]/[New CNT],"0.00%")
+
+-- There is another way to convert the value into % in Power BI Desktop.
+-- Create a measure with simple Divide formula
+-- Click on the name of measure in FIELDS section
+-- Go to Modeling tab and select % sign in Formatting section
+-- The field will automatically be converted to % value.
+
+https://stackoverflow.com/questions/38353064/how-to-format-new-measure-not-column-in-power-bi-as-percentage
