@@ -1,0 +1,8 @@
+-- This new column compares the level EIN to the row EIN and created a new LVL Name field without the individual contributors in it
+LVL1NAME = 
+IF (
+    'HRA_HR_HEADCOUNT_HRADMIN'[EMPLID]
+        = 'HRA_HR_HEADCOUNT_HRADMIN'[LVL_01_EIN],
+    BLANK(),
+    'HRA_HR_HEADCOUNT_HRADMIN'[LVL_01_NAME]
+)
