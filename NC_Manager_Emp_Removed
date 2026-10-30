@@ -6,3 +6,12 @@ IF (
     BLANK(),
     'HRA_HR_HEADCOUNT_HRADMIN'[LVL_01_NAME]
 )
+___________________________________
+-- This version adds text rather than leaving a blank field where the match occurs
+LVL3NAME = 
+IF (
+    'HRA_HR_HEADCOUNT_HRADMIN'[EMPLID]
+        = 'HRA_HR_HEADCOUNT_HRADMIN'[LVL_03_EIN],
+    "-- DIRECT REPORTS",
+    'HRA_HR_HEADCOUNT_HRADMIN'[LVL_03_NAME]
+)
